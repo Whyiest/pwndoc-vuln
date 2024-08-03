@@ -1,0 +1,2003 @@
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Fuite d'information via les moteurs de recherche
+      vulnType: Information Gathering
+      description: >-
+        <p>Cette vulnérabilité survient lorsque des informations sensibles ou
+        confidentielles sur une application web sont accessibles via des moteurs
+        de recherche. Les attaquants utilisent des techniques de reconnaissance
+        sur les moteurs de recherche pour trouver des informations non
+        intentionnellement exposées, telles que des fichiers de configuration,
+        des pages d'administration ou des données utilisateur. Cela peut être dû
+        à une mauvaise configuration des paramètres de confidentialité ou à des
+        fichiers non sécurisés indexés par les moteurs de recherche.</p>
+      remediation: >-
+        <p>Pour remédier à cette vulnérabilité, il est essentiel de configurer
+        correctement les fichiers robots.txt et les en-têtes HTTP pour empêcher
+        l'indexation des pages sensibles par les moteurs de recherche. Il est
+        également recommandé de passer en revue régulièrement le contenu indexé
+        et de demander la suppression des informations sensibles via les outils
+        de suppression des moteurs de recherche. Les tests de sécurité
+        périodiques et les audits de contenu permettent de s'assurer qu'aucune
+        information critique n'est accessible publiquement.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+  priority: 3
+  remediationComplexity: 1
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Empreinte du serveur web
+      vulnType: Information Gathering
+      description: >-
+        <p>L'empreinte du serveur web est une technique utilisée par les
+        attaquants pour identifier le type et la version d'un serveur web en
+        analysant les réponses du serveur aux requêtes HTTP. Cette information
+        permet aux attaquants de cibler des vulnérabilités spécifiques à cette
+        version du serveur.</p>
+      remediation: >-
+        <p>Pour empêcher l'empreinte du serveur, configurez le serveur pour
+        masquer ou modifier les informations de version dans les en-têtes HTTP.
+        L'utilisation de proxies inverses ou de pare-feux d'applications web
+        (WAF) peut également masquer les détails du serveur. De plus, il est
+        crucial de maintenir le serveur à jour avec les derniers correctifs de
+        sécurité pour réduire les risques d'exploitation des vulnérabilités
+        connues.</p>
+      references:
+        - ''
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Fuite d'information via les métadonnées du serveur web
+      vulnType: Information Gathering
+      description: >-
+        <p>Les métadonnées du serveur web, telles que les fichiers .htaccess,
+        .git, ou .DS_Store, peuvent contenir des informations sensibles sur la
+        configuration du serveur, les chemins d'accès, et d'autres détails
+        internes. Si ces fichiers sont accessibles publiquement, ils peuvent
+        être exploités par des attaquants pour obtenir des informations
+        critiques</p>
+      remediation: >-
+        <p>Configurez le serveur web pour restreindre l'accès aux métadonnées et
+        assurez-vous que ces fichiers ne sont pas accessibles publiquement.
+        Utilisez des règles de pare-feu ou de configuration du serveur (comme
+        dans .htaccess pour Apache) pour bloquer l'accès à ces fichiers.
+        Effectuez régulièrement des audits de sécurité pour vérifier
+        l'exposition des fichiers sensibles.</p>
+      references:
+        - ''
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Énumération des applications sur le serveur web
+      vulnType: Information Gathering
+      description: >-
+        <p>L'énumération des applications sur un serveur web permet aux
+        attaquants d'identifier toutes les applications hébergées et leurs
+        versions respectives. Cette information est utilisée pour cibler des
+        vulnérabilités spécifiques à ces applications ou à leurs
+        configurations.</p>
+      remediation: >-
+        <p>Limitez les informations divulguées par le serveur en configurant
+        correctement les messages d'erreur et les réponses du serveur. Utilisez
+        des pare-feux d'applications web (WAF) pour masquer les détails de
+        l'infrastructure. La segmentation et l'isolation des applications
+        peuvent également réduire les risques en empêchant les applications
+        moins sécurisées d'exposer d'autres applications sur le même
+        serveur.</p>
+      references:
+        - ''
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Fuite d'information via le contenu des pages web
+      vulnType: Information Gathering
+      description: >-
+        <p>Cette vulnérabilité survient lorsque des informations sensibles sont
+        divulguées dans le contenu des pages web, telles que des commentaires de
+        développeurs, des informations de débogage, ou des données utilisateur.
+        Cela peut inclure des scripts JavaScript non sécurisés, des messages
+        d'erreur détaillés ou des informations d'identification.</p>
+      remediation: >-
+        <p>Passez en revue et nettoyez régulièrement le contenu des pages web
+        pour supprimer toute information sensible. Configurez le serveur pour
+        afficher des messages d'erreur génériques et évitez de divulguer des
+        informations détaillées sur les erreurs. Mettez en place des pratiques
+        de codage sécurisées et formez les développeurs à ne pas inclure
+        d'informations sensibles dans le code ou les commentaires.</p>
+      references:
+        - ''
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Identification des points d'entrée de l'application
+      vulnType: Information Gathering
+      description: >-
+        <p>L'identification des points d'entrée d'une application permet aux
+        attaquants de comprendre comment interagir avec l'application et de
+        cibler des points spécifiques pour des attaques potentielles. Les points
+        d'entrée peuvent inclure des formulaires, des API, des points de
+        terminaison d'authentification, etc.</p>
+      references:
+        - >-
+          Effectuez une analyse complète de l'application pour identifier et
+          sécuriser tous les points d'entrée. Implémentez une validation et une
+          sanitation rigoureuses des entrées utilisateur pour chaque point
+          d'entrée. Utilisez des outils de détection et de prévention des
+          intrusions pour surveiller et bloquer les tentatives d'accès non
+          autorisées.
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Cartographie des chemins d'exécution à travers l'application
+      vulnType: Information Gathering
+      description: >-
+        <p>La cartographie des chemins d'exécution à travers une application
+        permet aux attaquants de comprendre la logique de l'application et de
+        trouver des points faibles dans le flux d'exécution. Cela peut inclure
+        l'identification des chemins de traitement des données, des flux de
+        travail et des processus métier.</p>
+      remediation: >-
+        <p>Documentez et révisez régulièrement les chemins d'exécution de
+        l'application pour identifier les points faibles et les améliorer.
+        Utilisez des outils d'analyse de code statique et dynamique pour
+        détecter les vulnérabilités dans le flux d'exécution. Implémentez des
+        contrôles de sécurité tout au long du cycle de vie du développement pour
+        assurer la résilience des chemins d'exécution.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Empreinte du framework d'application web
+      vulnType: Information Gathering
+      description: >-
+        <p>L'empreinte du framework d'application web permet aux attaquants
+        d'identifier le framework sous-jacent utilisé par une application, comme
+        Django, Rails, ou Spring. Cette information peut être exploitée pour
+        cibler des vulnérabilités spécifiques à ce framework.</p>
+      remediation: >-
+        <p>Masquez ou modifiez les signatures du framework dans les réponses
+        HTTP. Utilisez des pare-feux d'applications web (WAF) pour masquer les
+        détails du framework. Maintenez le framework à jour avec les derniers
+        correctifs de sécurité et suivez les meilleures pratiques de sécurité
+        spécifiques au framework utilisé.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Empreinte de l'application web
+      vulnType: Information Gathering
+      description: >-
+        <p>L'empreinte de l'application web consiste à identifier des
+        caractéristiques uniques de l'application, comme les technologies
+        utilisées, les versions, et les composants spécifiques. Cela permet aux
+        attaquants de cibler des vulnérabilités spécifiques à ces
+        composants.</p>
+      remediation: >-
+        <p>Réduisez les informations exposées sur l'application en configurant
+        correctement les en-têtes HTTP et en supprimant les commentaires ou les
+        métadonnées contenant des informations sur l'application. Utilisez des
+        outils de détection et de prévention des intrusions pour masquer les
+        signatures de l'application. Assurez-vous que tous les composants de
+        l'application sont à jour avec les correctifs de sécurité.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Cartographie de l'architecture d'application
+      vulnType: Information Gathering
+      description: >-
+        <p>La cartographie de l'architecture d'application permet aux attaquants
+        de comprendre la structure et les composants d'une application, y
+        compris les serveurs, les bases de données, les API et les
+        interconnexions. Cette connaissance peut être utilisée pour identifier
+        des points faibles dans la conception et l'architecture.</p>
+      remediation: >-
+        <p>Sécurisez l'architecture de l'application en utilisant des principes
+        de conception sécurisés et en suivant les meilleures pratiques de
+        sécurité. Effectuez des revues d'architecture régulières pour identifier
+        et corriger les points faibles. Utilisez la segmentation et l'isolation
+        des composants pour limiter l'impact des attaques potentielles.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Configuration de l'infrastructure réseau non sécurisée
+      vulnType: Configuration and Deployment Management Vulnerability
+      description: >-
+        <p>Une mauvaise configuration de l'infrastructure réseau peut permettre
+        à des attaquants de contourner les mesures de sécurité, d'accéder à des
+        réseaux internes sensibles, ou de lancer des attaques plus
+        sophistiquées. Cela inclut des failles dans la configuration des
+        pare-feu, la segmentation des réseaux et la sécurité des réseaux sans
+        fil.</p>
+      remediation: >-
+        <p>Assurez-vous que les pare-feu sont correctement configurés avec des
+        règles restrictives, segmentez les réseaux pour isoler les zones
+        sensibles, et sécurisez les réseaux sans fil avec des protocoles de
+        chiffrement forts et des mots de passe complexes.</p>
+      references:
+        - ''
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Configuration de la plateforme d'application non sécurisée
+      vulnType: Configuration and Deployment Management Vulnerability
+      description: >-
+        <p>Une configuration incorrecte de la plateforme d'application peut
+        exposer l'application à des attaques en permettant aux attaquants
+        d'exploiter des failles de configuration des serveurs web, des bases de
+        données, des frameworks ou des dépendances. Cela peut inclure des
+        services non nécessaires activés, des paramètres par défaut non
+        sécurisés et des mises à jour manquantes.</p>
+      remediation: >-
+        <p>Configurez correctement les serveurs et les bases de données en
+        suivant les meilleures pratiques de sécurité, mettez à jour
+        régulièrement les frameworks et les dépendances, et appliquez les
+        correctifs de sécurité dès qu'ils sont disponibles.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: >-
+        Mauvaise gestion des extensions de fichiers pour les informations
+        sensibles
+      vulnType: Configuration and Deployment Management Vulnerability
+      description: >-
+        <p>Une gestion inadéquate des extensions de fichiers peut permettre à
+        des attaquants de télécharger des fichiers contenant des informations
+        sensibles ou de manipuler les types de fichiers pour contourner les
+        contrôles de sécurité. Cela peut entraîner des fuites d'informations ou
+        des exécutions de code malveillant.</p>
+      remediation: >-
+        <p>Mettez en place des contrôles stricts pour les types de fichiers
+        autorisés au téléchargement, bloquez les extensions de fichiers
+        dangereuses et vérifiez régulièrement les fichiers téléchargés pour
+        détecter toute activité suspecte.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: >-
+        Présence d'anciennes sauvegardes et de fichiers non référencés contenant
+        des informations sensibles
+      vulnType: Configuration and Deployment Management Vulnerability
+      description: >-
+        <p>Les anciennes sauvegardes et les fichiers non référencés peuvent
+        contenir des informations sensibles qui, bien que non utilisées, restent
+        accessibles et exposées à des risques de sécurité. Ces fichiers peuvent
+        être exploités par des attaquants pour accéder à des données
+        sensibles.</p>
+      remediation: >-
+        <p>Identifiez et supprimez les anciennes sauvegardes et les fichiers non
+        référencés contenant des informations sensibles. Mettez en place une
+        politique de gestion des fichiers pour éviter l'accumulation de fichiers
+        obsolètes.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+  priority: 2
+  remediationComplexity: 1
+- cvssv3: null
+  details:
+    - locale: fr
+      title: >-
+        Interfaces d'administration de l'infrastructure et des applications
+        accessibles
+      vulnType: Configuration and Deployment Management Vulnerability
+      description: >-
+        <p>Les interfaces d'administration accessibles de l'infrastructure et
+        des applications peuvent être exploitées par des attaquants pour prendre
+        le contrôle des systèmes, exécuter des commandes arbitraires, ou accéder
+        à des informations sensibles. Cela peut inclure des interfaces non
+        sécurisées ou mal protégées.</p>
+      remediation: >-
+        <p>Restreignez l'accès aux interfaces d'administration en utilisant des
+        mécanismes d'authentification forts, limitez l'accès aux adresses IP de
+        confiance, et surveillez régulièrement les tentatives d'accès.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Méthodes HTTP non sécurisées
+      vulnType: Configuration and Deployment Management Vulnerability
+      description: >-
+        <p>Certaines méthodes HTTP peuvent permettre des actions non désirées si
+        elles ne sont pas correctement contrôlées. Les méthodes potentiellement
+        dangereuses comme PUT ou DELETE peuvent être exploitées par des
+        attaquants pour modifier des données ou injecter des contenus
+        malveillants.</p>
+      remediation: >-
+        <p>Limitez les méthodes HTTP autorisées aux seules méthodes nécessaires
+        (comme GET et POST), et désactivez les méthodes potentiellement
+        dangereuses comme PUT et DELETE, sauf si elles sont absolument
+        nécessaires.</p>
+      references:
+        - ''
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: HTTP Strict Transport Security (HSTS) non configuré
+      vulnType: Configuration and Deployment Management Vulnerability
+      description: >-
+        <p>L'absence de configuration de HTTP Strict Transport Security (HSTS)
+        peut permettre à des attaquants de lancer des attaques de type
+        man-in-the-middle, compromettant la confidentialité et l'intégrité des
+        communications entre le client et le serveur.</p>
+      remediation: >-
+        <p>Activez HSTS en ajoutant l'en-tête HSTS avec des paramètres
+        appropriés à vos réponses HTTP, et assurez-vous que toutes les
+        communications passent par HTTPS.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: >-
+        Politique de cross-domain pour les applications Internet riches (RIA)
+        non sécurisée
+      vulnType: Configuration and Deployment Management Vulnerability
+      description: >-
+        <p>Une politique de cross-domain incorrecte pour les applications
+        Internet riches (RIA) peut permettre à des domaines non autorisés
+        d'accéder à des ressources sensibles, conduisant à des violations de
+        données ou à des attaques cross-site.</p>
+      remediation: >-
+        <p>Configurez correctement le fichier crossdomain.xml pour restreindre
+        les domaines autorisés, et vérifiez régulièrement les configurations
+        pour s'assurer qu'elles restent sécurisées</p>
+      references:
+        - ''
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Permissions de fichiers non sécurisées
+      vulnType: Configuration and Deployment Management Vulnerability
+      description: >-
+        <p>Des permissions de fichiers incorrectes peuvent permettre à des
+        utilisateurs non autorisés d'accéder ou de modifier des fichiers
+        sensibles, compromettant ainsi la sécurité et l'intégrité des
+        données.</p>
+      remediation: >-
+        <p>Configurez les permissions des fichiers de manière restrictive, en
+        accordant seulement les permissions nécessaires aux utilisateurs
+        appropriés. Surveillez régulièrement les permissions des fichiers pour
+        détecter toute anomalie.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Risque de prise de contrôle de sous-domaines
+      vulnType: Configuration and Deployment Management Vulnerability
+      description: >-
+        <p>Des sous-domaines pointant vers des services inexistants peuvent être
+        pris en contrôle par des attaquants, leur permettant d'héberger du
+        contenu malveillant ou de compromettre la sécurité de
+        l'organisation.</p>
+      remediation: >-
+        <p>Vérifiez régulièrement les sous-domaines pour s'assurer qu'ils
+        pointent vers des services actifs et sécurisés, et supprimez ou
+        redirigez les sous-domaines qui ne sont plus utilisés.</p>
+      references:
+        - ''
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Sécurité du stockage cloud
+      vulnType: Configuration and Deployment Management Vulnerability
+      description: >-
+        <p>Une mauvaise configuration du stockage cloud peut exposer des données
+        sensibles à des accès non autorisés, ce qui peut entraîner des
+        violations de données et des fuites d'informations critiques.</p>
+      remediation: >-
+        <p>Configurez les permissions du stockage cloud pour restreindre
+        l'accès, utilisez le chiffrement pour protéger les données sensibles, et
+        surveillez les accès et les activités sur les services cloud.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Politique de sécurité du contenu (CSP) non configurée
+      vulnType: Configuration and Deployment Management Vulnerability
+      description: >-
+        <p>L'absence de configuration de la politique de sécurité du contenu
+        (CSP) peut exposer l'application à des attaques de type cross-site
+        scripting (XSS), compromettant la sécurité des utilisateurs et des
+        données.</p>
+      remediation: >-
+        <p>Implémentez une politique CSP en ajoutant l'en-tête CSP avec des
+        directives appropriées, et testez régulièrement pour vérifier que la
+        politique est efficace.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Confusion de chemin
+      vulnType: Configuration and Deployment Management Vulnerability
+      description: >-
+        <p>La confusion de chemin peut permettre à un attaquant d'accéder à des
+        fichiers ou des répertoires sensibles en manipulant les chemins d'accès,
+        compromettant ainsi la sécurité et l'intégrité des données.</p>
+      remediation: >-
+        <p>Utilisez des fonctions de gestion de chemin sécurisées, validez et
+        nettoyez les entrées utilisateur, et configurez les serveurs pour
+        empêcher l'accès non autorisé aux répertoires sensibles.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Définitions de rôles incorrectes
+      vulnType: Identity Management Vulnerability
+      description: >-
+        <p>Une mauvaise définition des rôles peut entraîner des problèmes de
+        sécurité importants en permettant à des utilisateurs d'accéder à des
+        fonctionnalités ou des données pour lesquelles ils ne sont pas
+        autorisés. Cela peut être dû à une mauvaise séparation des privilèges ou
+        à des rôles mal configurés qui ne reflètent pas correctement les
+        responsabilités des utilisateurs.</p>
+      remediation: >-
+        <p>Passez en revue et redéfinissez les rôles et les autorisations pour
+        s'assurer qu'ils correspondent aux besoins opérationnels et respectent
+        les principes de moindre privilège. Utilisez des modèles de rôles
+        standardisés et effectuez des audits réguliers des permissions.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Processus d'enregistrement des utilisateurs non sécurisé
+      vulnType: Identity Management Vulnerability
+      description: >-
+        <p>Un processus d'enregistrement des utilisateurs non sécurisé peut
+        permettre à des attaquants de créer des comptes malveillants, d'usurper
+        l'identité d'autres utilisateurs ou d'exploiter des failles dans le
+        système pour contourner les mesures de sécurité.</p>
+      remediation: >-
+        <p>Implémentez des mesures de sécurité robustes pour le processus
+        d'enregistrement, telles que la vérification des e-mails, l'utilisation
+        de CAPTCHA pour prévenir les enregistrements automatisés, et
+        l'application de politiques strictes de mot de passe. Vérifiez également
+        la validation des données d'entrée pour prévenir les attaques
+        d'injection.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Processus de provisionnement des comptes non sécurisé
+      vulnType: Identity Management Vulnerability
+      description: >-
+        <p>Un processus de provisionnement des comptes mal configuré peut
+        entraîner des problèmes de sécurité en permettant à des utilisateurs
+        d'obtenir des accès inappropriés ou excessifs. Cela peut inclure des
+        erreurs dans l'attribution des rôles ou des permissions, ou des
+        processus de vérification insuffisants.</p>
+      remediation: >-
+        <p>Mettez en place des processus de provisionnement des comptes qui
+        incluent des étapes de validation rigoureuses, une gestion claire des
+        rôles et des permissions, et des audits réguliers pour s'assurer que les
+        comptes sont configurés correctement.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Enumération des comptes et comptes d'utilisateurs devinables
+      vulnType: Identity Management Vulnerability
+      description: >-
+        <p>La possibilité d'énumérer des comptes d'utilisateurs ou de deviner
+        des comptes d'utilisateurs faibles peut permettre à des attaquants de
+        lancer des attaques par force brute ou d'usurper l'identité
+        d'utilisateurs légitimes. Cela peut se produire si le système divulgue
+        des informations sur l'existence des comptes ou si les noms
+        d'utilisateur sont facilement devinables.</p>
+      references:
+        - >-
+          Implémentez des mesures pour prévenir l'énumération des comptes, comme
+          des messages d'erreur génériques pour les tentatives de connexion
+          échouées. Utilisez des noms d'utilisateur complexes et imposez des
+          politiques strictes pour éviter les comptes facilement devinables.
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Politique de noms d'utilisateur faible ou non appliquée
+      vulnType: Identity Management Vulnerability
+      description: >-
+        <p>Une politique de noms d'utilisateur faible ou non appliquée peut
+        permettre à des utilisateurs de choisir des noms d'utilisateur
+        facilement devinables ou non conformes aux exigences de sécurité. Cela
+        augmente le risque d'usurpation d'identité et d'attaques par force
+        brute.</p>
+      remediation: >-
+        <p>Mettez en place et appliquez une politique de noms d'utilisateur
+        stricte qui exige des noms d'utilisateur uniques, complexes et
+        difficiles à deviner. Effectuez des vérifications régulières pour vous
+        assurer que les noms d'utilisateur respectent cette politique et éduquez
+        les utilisateurs sur l'importance de choisir des identifiants
+        sécurisés.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Informations d'identification transportées sur un canal non chiffré
+      vulnType: Authentication Vulnerability
+      description: >-
+        <p>La transmission des informations d'identification sur un canal non
+        chiffré expose les utilisateurs au risque d'interception par des
+        attaquants, ce qui peut entraîner la compromission des comptes et des
+        données sensibles.</p>
+      remediation: >-
+        <p>Utilisez toujours des protocoles chiffrés comme HTTPS pour
+        transporter les informations d'identification. Vérifiez que les
+        certificats SSL/TLS sont valides et correctement configurés pour éviter
+        les attaques de type man-in-the-middle.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Informations d'identification par défaut
+      vulnType: Authentication Vulnerability
+      description: >-
+        <p>L'utilisation de mots de passe par défaut fournis par les fabricants
+        pour les comptes administratifs peut permettre à des attaquants
+        d'accéder facilement aux systèmes.</p>
+      remediation: >-
+        <p>Changez immédiatement tous les mots de passe par défaut après
+        l'installation des systèmes et des applications. Implémentez une
+        politique qui impose le changement des mots de passe par défaut pour
+        tous les nouveaux appareils et logiciels.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Mécanisme de verrouillage faible
+      vulnType: Authentication Vulnerability
+      description: >-
+        <p>Un mécanisme de verrouillage des comptes faible ou inexistant permet
+        à des attaquants de lancer des attaques par force brute sans être
+        détectés, augmentant ainsi les risques de compromission des comptes.</p>
+      remediation: >-
+        <p>Implémentez un mécanisme de verrouillage des comptes après un certain
+        nombre de tentatives de connexion échouées. Utilisez des mesures
+        progressives, comme le retardement des réponses, et alertez les
+        administrateurs en cas de tentatives répétées de connexion échouées.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Contournement du schéma d'authentification
+      vulnType: Authentication Vulnerability
+      description: >-
+        <p>Les schémas d'authentification vulnérables peuvent être contournés
+        par des attaquants pour accéder sans autorisation aux systèmes et aux
+        données. Cela peut inclure des failles dans la logique
+        d'authentification ou des mécanismes d'authentification
+        insuffisants.</p>
+      remediation: >-
+        <p>Effectuez des revues de code et des tests de pénétration réguliers
+        pour identifier et corriger les failles dans les schémas
+        d'authentification. Utilisez des mécanismes d'authentification robustes
+        et multifactoriels.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Fonctionnalité "se souvenir du mot de passe" vulnérable
+      vulnType: Authentication Vulnerability
+      description: >-
+        <p>Les fonctionnalités de "se souvenir du mot de passe" vulnérables
+        peuvent stocker des mots de passe de manière non sécurisée, permettant à
+        des attaquants d'accéder aux comptes sans authentification.</p>
+      remediation: >-
+        <p>Évitez de stocker les mots de passe en clair sur les appareils
+        clients. Utilisez des tokens sécurisés et chiffrés pour les
+        fonctionnalités de "se souvenir du mot de passe" et imposez des durées
+        de validité limitées.</p><h4></h4>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Faiblesses du cache du navigateur
+      vulnType: Authentication Vulnerability
+      description: >-
+        <p>Le stockage d'informations sensibles dans le cache du navigateur peut
+        permettre à des attaquants d'accéder à ces informations via des attaques
+        locales ou distantes.</p>
+      remediation: >-
+        <p>Configurez les en-têtes HTTP pour empêcher le stockage en cache des
+        pages contenant des informations sensibles. Utilisez des directives
+        comme "no-cache" et "no-store" pour protéger les données
+        utilisateur.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Politique de mot de passe faible
+      vulnType: Authentication Vulnerability
+      description: >-
+        <p>Une politique de mot de passe faible permet aux utilisateurs de
+        choisir des mots de passe facilement devinables, augmentant le risque de
+        compromission des comptes par des attaques par force brute ou d'autres
+        méthodes de devinette.</p>
+      remediation: >-
+        <p>Mettez en place une politique de mot de passe stricte qui exige des
+        mots de passe complexes, avec un minimum de longueur et une combinaison
+        de lettres majuscules, minuscules, chiffres et caractères spéciaux.
+        Encouragez l'utilisation de gestionnaires de mots de passe.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Réponses faibles aux questions de sécurité
+      vulnType: Authentication Vulnerability
+      description: >-
+        <p>Les réponses faibles aux questions de sécurité peuvent être devinées
+        ou recherchées facilement, permettant à des attaquants de contourner les
+        mécanismes d'authentification basés sur ces questions.</p>
+      remediation: >-
+        <p>Utilisez des questions de sécurité difficiles à deviner et encouragez
+        les utilisateurs à fournir des réponses non évidentes. Considérez
+        l'utilisation de méthodes alternatives plus sécurisées pour la
+        récupération des comptes, comme l'authentification multifactorielle.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: >-
+        Fonctionnalités de changement ou de réinitialisation de mot de passe
+        vulnérables
+      vulnType: Authentication Vulnerability
+      description: >-
+        <p>Les fonctionnalités de changement ou de réinitialisation de mot de
+        passe vulnérables peuvent être exploitées par des attaquants pour
+        prendre le contrôle des comptes. Cela inclut des processus de
+        vérification faibles ou des liens de réinitialisation non sécurisés.</p>
+      remediation: >-
+        <p>Renforcez les processus de changement et de réinitialisation de mot
+        de passe avec des vérifications supplémentaires, comme
+        l'authentification multifactorielle et des liens de réinitialisation
+        sécurisés. Informez les utilisateurs de toute activité de
+        réinitialisation de mot de passe sur leur compte.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Authentification plus faible dans un canal alternatif
+      vulnType: Authentication Vulnerability
+      description: >-
+        <p>L'utilisation de canaux d'authentification alternatifs moins
+        sécurisés (comme les applications mobiles ou les API) peut permettre à
+        des attaquants de contourner les mécanismes de sécurité
+        principaux.</p><p></p>
+      remediation: >-
+        <p>Assurez-vous que tous les canaux d'authentification respectent les
+        mêmes normes de sécurité élevées, en utilisant des protocoles sécurisés
+        et des mécanismes d'authentification robustes. Évitez les solutions de
+        contournement qui affaiblissent la sécurité globale.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Test de l'authentification multifactorielle
+      vulnType: Authentication Vulnerability
+      description: >-
+        <p>Une mauvaise implémentation de l'authentification multifactorielle
+        (MFA) peut être contournée par des attaquants, rendant la protection
+        supplémentaire inefficace. Cela inclut des mécanismes de vérification
+        faibles ou des configurations incorrectes.</p>
+      remediation: >-
+        <p>Implémentez correctement l'authentification multifactorielle en
+        utilisant des facteurs robustes et diversifiés (comme des tokens
+        matériels, des applications d'authentification, des biométries). Testez
+        régulièrement les configurations MFA pour s'assurer qu'elles
+        fonctionnent comme prévu et qu'elles ne présentent pas de failles.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Directory Traversal File Inclusion
+      vulnType: Authorization Vulnerability
+      description: >-
+        <p>Les vulnérabilités de type "directory traversal" permettent à des
+        attaquants d'accéder à des fichiers et des répertoires en dehors de la
+        racine web, ce qui peut entraîner l'exposition de fichiers sensibles et
+        la compromission de l'application. Cela peut se produire lorsque les
+        entrées utilisateur ne sont pas correctement validées.</p>
+      remediation: >-
+        <p>Validez et nettoyez les entrées utilisateur pour éviter les séquences
+        de répertoire malveillantes. Utilisez des fonctions de manipulation de
+        chemin sécurisées et configurez les serveurs pour restreindre l'accès
+        aux répertoires critiques.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Contournement du schéma d'autorisation
+      vulnType: Authorization Vulnerability
+      description: >-
+        <p>Les schémas d'autorisation vulnérables peuvent être contournés par
+        des attaquants pour accéder à des ressources non autorisées. Cela inclut
+        des failles dans la logique d'autorisation qui permettent à des
+        utilisateurs non autorisés d'effectuer des actions réservées aux
+        utilisateurs autorisés.</p>
+      remediation: >-
+        <p>Effectuez des revues de code et des tests de pénétration réguliers
+        pour identifier et corriger les failles dans les schémas d'autorisation.
+        Implémentez des contrôles d'autorisation stricts basés sur les rôles et
+        les permissions des utilisateurs.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Escalade de privilèges
+      vulnType: Authorization Vulnerability
+      description: >-
+        <p>Les vulnérabilités d'escalade de privilèges permettent à des
+        utilisateurs ayant des privilèges limités d'obtenir des privilèges plus
+        élevés, ce qui peut leur permettre d'effectuer des actions réservées aux
+        administrateurs ou à d'autres utilisateurs privilégiés.</p>
+      remediation: >-
+        <p>Mettez en place une séparation stricte des privilèges et vérifiez
+        régulièrement les permissions des utilisateurs. Utilisez des mécanismes
+        de contrôle d'accès basés sur les rôles et effectuez des audits
+        réguliers pour détecter et corriger les configurations de permissions
+        incorrectes.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Références directes aux objets non sécurisées
+      vulnType: Authorization Vulnerability
+      description: >-
+        <p>Les références directes aux objets non sécurisées (IDOR) permettent à
+        des attaquants d'accéder à des objets auxquels ils ne devraient pas
+        avoir accès en manipulant les identifiants dans les requêtes. Cela peut
+        entraîner la divulgation ou la modification non autorisée de
+        données.</p>
+      remediation: >-
+        <p>Utilisez des contrôles d'autorisation pour vérifier que les
+        utilisateurs ont les permissions nécessaires pour accéder aux objets
+        demandés. Implémentez des identifiants non prédictifs et des
+        vérifications côté serveur pour valider les requêtes.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Faiblesses de OAuth
+      vulnType: Authorization Vulnerability
+      description: >-
+        <p>Les faiblesses dans la mise en œuvre de OAuth peuvent permettre à des
+        attaquants de contourner les mécanismes d'autorisation, compromettant
+        ainsi la sécurité des applications et des utilisateurs.</p>
+      remediation: >-
+        <p>Suivez les meilleures pratiques de sécurité pour la mise en œuvre de
+        OAuth et effectuez des tests réguliers pour identifier et corriger les
+        failles potentielles.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Faiblesses du serveur d'autorisation OAuth
+      vulnType: Authorization Vulnerability
+      description: >-
+        <p>Les vulnérabilités au niveau du serveur d'autorisation OAuth peuvent
+        permettre à des attaquants de manipuler les flux d'autorisation,
+        d'usurper l'identité d'utilisateurs ou d'obtenir des tokens d'accès non
+        autorisés.</p>
+      remediation: >-
+        <p>Assurez-vous que le serveur d'autorisation est configuré
+        correctement, avec des mécanismes de validation et de vérification
+        robustes pour les tokens et les flux d'autorisation. Utilisez des
+        algorithmes de chiffrement forts et vérifiez régulièrement les
+        configurations de sécurité.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Faiblesses du client OAuth
+      vulnType: Authorization Vulnerability
+      description: >-
+        <p>Les vulnérabilités au niveau des clients OAuth peuvent permettre à
+        des attaquants de voler des tokens d'accès, de rediriger les
+        utilisateurs vers des sites malveillants ou d'obtenir des autorisations
+        non autorisées.</p>
+      remediation: >-
+        <p>Configurez les clients OAuth pour utiliser des redirections
+        sécurisées et validez les tokens de manière rigoureuse. Implémentez des
+        pratiques de développement sécurisées et effectuez des tests de sécurité
+        réguliers pour identifier et corriger les failles potentielles.</p>
+      references:
+        - ''
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Schéma de gestion des sessions
+      vulnType: Session Management Vulnerability
+      description: >-
+        <p>Un schéma de gestion des sessions mal conçu peut permettre à des
+        attaquants de compromettre des sessions utilisateur, ce qui peut
+        entraîner des accès non autorisés et des fuites de données. Un bon
+        schéma de gestion des sessions doit garantir que les identifiants de
+        session sont uniques, difficiles à deviner et correctement protégés.</p>
+      remediation: >-
+        <p>Utilisez des identifiants de session longs et aléatoires.
+        Assurez-vous que les sessions sont invalidées après la déconnexion de
+        l'utilisateur et implémentez des mécanismes pour détecter et empêcher
+        les tentatives de session brute force.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Attributs des cookies
+      vulnType: Session Management Vulnerability
+      description: >-
+        <p>Les cookies utilisés pour la gestion des sessions doivent avoir des
+        attributs sécurisés pour empêcher leur interception ou leur manipulation
+        par des attaquants. Cela inclut les attributs Secure, HttpOnly et
+        SameSite.</p>
+      remediation: >-
+        <p>Configurez les cookies de session avec les attributs Secure (pour les
+        transmettre uniquement sur HTTPS), HttpOnly (pour empêcher l'accès via
+        JavaScript) et SameSite (pour prévenir les attaques CSRF).</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Fixation de session
+      vulnType: Session Management Vulnerability
+      description: >-
+        <p>La fixation de session permet à un attaquant de fixer l'identifiant
+        de session d'un utilisateur avant que celui-ci ne s'authentifie,
+        permettant ainsi à l'attaquant d'usurper l'identité de l'utilisateur
+        après l'authentification.</p>
+      remediation: >-
+        <p>Générez un nouvel identifiant de session après chaque
+        authentification réussie et assurez-vous que les sessions précédentes
+        sont correctement invalidées.</p><h4></h4>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Variables de session exposées
+      vulnType: Session Management Vulnerability
+      description: >-
+        <p>L'exposition des variables de session peut permettre à des attaquants
+        d'accéder à des informations sensibles stockées dans la session,
+        compromettant ainsi la sécurité de l'application.</p>
+      remediation: >-
+        <p>Évitez de stocker des informations sensibles dans les variables de
+        session ou chiffrez-les avant de les stocker. Utilisez des mécanismes de
+        protection des données pour sécuriser les informations stockées dans la
+        session.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Cross Site Request Forgery (CSRF)
+      vulnType: Session Management Vulnerability
+      description: >-
+        <p>Les attaques CSRF exploitent le fait qu'un navigateur authentifié
+        peut être manipulé pour envoyer des requêtes malveillantes à une
+        application web sans que l'utilisateur en soit conscient.</p>
+      remediation: >-
+        <p>Implémentez des tokens CSRF uniques et vérifiez-les pour chaque
+        requête qui modifie l'état. Utilisez l'attribut SameSite sur les cookies
+        pour limiter les requêtes intersites.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Fonctionnalité de déconnexion
+      vulnType: Session Management Vulnerability
+      description: >-
+        <p>Une fonctionnalité de déconnexion mal implémentée peut laisser des
+        sessions utilisateur actives, permettant à des attaquants d'exploiter
+        des sessions ouvertes après la déconnexion de l'utilisateur.</p>
+      remediation: >-
+        <p>Assurez-vous que la fonctionnalité de déconnexion invalide
+        correctement la session côté serveur. Informez les utilisateurs de la
+        nécessité de se déconnecter après l'utilisation de l'application,
+        surtout sur des ordinateurs partagés.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Timeout de session
+      vulnType: Session Management Vulnerability
+      description: >-
+        <p>Un timeout de session approprié est crucial pour limiter le temps
+        pendant lequel une session peut être exploitée par un attaquant en cas
+        de session inactive.</p>
+      remediation: >-
+        <p>Configurez un timeout de session raisonnable basé sur la sensibilité
+        des données et les besoins des utilisateurs. Assurez-vous que les
+        sessions inactives sont automatiquement invalidées après la période de
+        timeout définie.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Puzzling de session
+      vulnType: Session Management Vulnerability
+      description: >-
+        <p>Le session puzzling implique l'exploitation des failles dans la
+        gestion des sessions pour combiner plusieurs sessions partielles en une
+        session complète et valide.</p>
+      remediation: >-
+        <p>Implémentez une gestion stricte et atomique des sessions.
+        Assurez-vous que les sessions partielles ne peuvent pas être combinées
+        pour former une session valide.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Détournement de session
+      vulnType: Session Management Vulnerability
+      description: >-
+        <p>Le détournement de session permet à un attaquant de voler
+        l'identifiant de session d'un utilisateur authentifié et d'usurper son
+        identité pour accéder à des ressources protégées.</p>
+      remediation: >-
+        <p>Utilisez des connexions chiffrées (HTTPS) pour protéger les
+        identifiants de session en transit. Implémentez des mécanismes de
+        détection d'activités suspectes et alertez les utilisateurs en cas de
+        comportement anormal.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Mauvaise implémentation des JSON Web Tokens (JWT)
+      vulnType: Session Management Vulnerability
+      description: >-
+        <p>Les JWT sont souvent utilisés pour la gestion des sessions dans les
+        applications modernes. Des failles dans la mise en œuvre des JWT peuvent
+        permettre des attaques telles que la falsification de token ou
+        l'exploitation de failles dans l'algorithme de signature.</p>
+      remediation: >-
+        <p>Utilisez des algorithmes de signature sécurisés (comme RS256) et
+        vérifiez la validité des tokens avant de les accepter. Implémentez un
+        mécanisme de révocation pour les tokens compromis et définissez des
+        expirations appropriées pour les tokens.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Sessions concurrentes
+      vulnType: Session Management Vulnerability
+      description: >-
+        <p>La gestion des sessions concurrentes est essentielle pour empêcher
+        les attaques où un utilisateur pourrait être connecté simultanément à
+        partir de plusieurs dispositifs, augmentant le risque de
+        compromission.</p>
+      remediation: >-
+        <p>Limitez le nombre de sessions concurrentes par utilisateur et alertez
+        les utilisateurs en cas de connexions multiples. Implémentez une
+        fonctionnalité permettant aux utilisateurs de gérer et de déconnecter
+        les sessions actives.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Reflected Cross Site Scripting (XSS)
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Le Reflected Cross Site Scripting se produit lorsque des entrées
+        utilisateur non validées sont renvoyées directement par l'application,
+        permettant à des attaquants d'injecter des scripts malveillants qui
+        s'exécutent dans le navigateur de la victime.</p>
+      remediation: >-
+        <p>Validez et échappez toutes les entrées utilisateur avant de les
+        renvoyer dans les réponses HTML. Utilisez des bibliothèques de sécurité
+        pour éviter les injections XSS et implémentez des politiques de sécurité
+        de contenu (CSP).</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Stored Cross Site Scripting (XSS)
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Le Stored Cross Site Scripting se produit lorsque des entrées
+        utilisateur malveillantes sont stockées sur le serveur (par exemple,
+        dans une base de données) et affichées ultérieurement aux utilisateurs
+        sans validation, permettant l'exécution de scripts malveillants.</p>
+      remediation: >-
+        <p>Validez et échappez toutes les entrées utilisateur avant de les
+        stocker. Utilisez des mécanismes de sécurité pour filtrer les scripts
+        malveillants et déployez des politiques de sécurité de contenu
+        (CSP).</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Altération des verbes HTTP
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>L'altération des verbes HTTP consiste à manipuler les méthodes HTTP
+        (GET, POST, PUT, DELETE) pour contourner les contrôles d'accès ou
+        exploiter des failles logiques dans l'application.</p>
+      remediation: >-
+        <p>Vérifiez et limitez les méthodes HTTP autorisées sur chaque endpoint.
+        Implémentez des contrôles d'accès basés sur les rôles et les permissions
+        pour chaque méthode HTTP.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Pollution des paramètres HTTP
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>La pollution des paramètres HTTP se produit lorsque des attaquants
+        envoient plusieurs occurrences du même paramètre dans une requête HTTP,
+        ce qui peut perturber la logique de traitement des paramètres et
+        entraîner des comportements inattendus.</p>
+      remediation: >-
+        <p>Validez et normalisez les paramètres HTTP pour s'assurer qu'il n'y a
+        qu'une seule occurrence par paramètre. Ignorez ou rejetez les requêtes
+        contenant des paramètres en double.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Injection SQL
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les injections SQL se produisent lorsque des entrées utilisateur non
+        contrôlées sont intégrées dans des requêtes SQL, permettant aux
+        attaquants d'exécuter des commandes SQL arbitraires et d'accéder ou de
+        manipuler les données de la base de données.</p>
+      remediation: >-
+        <p>Utilisez des requêtes préparées avec des paramètres liés pour toutes
+        les interactions avec la base de données. Validez et échappez toutes les
+        entrées utilisateur et utilisez des ORM (Object-Relational Mapping)
+        sécurisés.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Injection côté client
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les injections côté client exploitent des vulnérabilités dans le code
+        exécuté dans le navigateur de l'utilisateur pour manipuler des données
+        ou exécuter des scripts malveillants.</p>
+      remediation: >-
+        <p>Validez et échappez toutes les entrées utilisateur côté serveur.
+        Utilisez des politiques de sécurité de contenu (CSP) et des techniques
+        de codage sécurisées pour le JavaScript côté client.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Injection LDAP
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les injections LDAP permettent aux attaquants de manipuler des
+        requêtes LDAP pour accéder ou modifier des informations dans des
+        annuaires LDAP.</p>
+      remediation: >-
+        <p>Utilisez des requêtes préparées pour les opérations LDAP. Validez et
+        échappez toutes les entrées utilisateur avant de les inclure dans les
+        requêtes LDAP.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Injection XML
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les injections XML permettent aux attaquants de manipuler des données
+        XML pour exécuter des commandes non autorisées ou accéder à des
+        informations sensibles.</p>
+      remediation: >-
+        <p>Validez et échappez toutes les entrées utilisateur avant de les
+        inclure dans des documents XML. Utilisez des parseurs XML sécurisés et
+        configurez-les pour éviter les entités externes XML (XXE).</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Injection SSI
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les injections SSI (Server-Side Includes) permettent aux attaquants
+        d'exécuter des commandes sur le serveur en manipulant des directives
+        SSI.</p>
+      remediation: >-
+        <p>Désactivez les SSI si elles ne sont pas nécessaires. Validez et
+        échappez toutes les entrées utilisateur incluses dans les directives
+        SSI.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Injection XPath
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les injections XPath permettent aux attaquants de manipuler des
+        requêtes XPath pour accéder ou modifier des informations dans des
+        documents XML.</p>
+      remediation: >-
+        <p>Utilisez des requêtes préparées pour les opérations XPath. Validez et
+        échappez toutes les entrées utilisateur avant de les inclure dans les
+        requêtes XPath.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Injection IMAP/SMTP
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les injections IMAP/SMTP permettent aux attaquants de manipuler des
+        commandes IMAP ou SMTP pour accéder ou envoyer des emails non
+        autorisés.</p>
+      remediation: >-
+        <p>Validez et échappez toutes les entrées utilisateur avant de les
+        inclure dans les commandes IMAP ou SMTP. Utilisez des bibliothèques de
+        messagerie sécurisées et configurez-les pour éviter les injections.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Inclusion de fichier
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>L'inclusion de fichier permet à des attaquants d'inclure des fichiers
+        externes ou internes via des entrées utilisateur non sécurisées,
+        entraînant l'exécution de code malveillant.</p>
+      remediation: >-
+        <p>Désactivez les inclusions de fichiers si elles ne sont pas
+        nécessaires. Validez et échappez toutes les entrées utilisateur
+        utilisées pour les inclusions de fichiers.</p>
+      references:
+        - ''
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Injection de commandes distantes (RCE)
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les injections de commandes permettent aux attaquants d'exécuter des
+        commandes système arbitraires sur le serveur en manipulant des entrées
+        utilisateur non sécurisées.</p>
+      remediation: >-
+        <p>Utilisez des API sécurisées pour exécuter des commandes système et
+        validez toutes les entrées utilisateur. Évitez d'utiliser des commandes
+        système avec des entrées utilisateur non sécurisées.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Injection de chaînes de format
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les injections de chaînes de format exploitent des failles dans le
+        traitement des chaînes de format pour exécuter du code malveillant ou
+        accéder à des données sensibles.</p>
+      remediation: >-
+        <p>Validez et échappez toutes les entrées utilisateur avant de les
+        utiliser dans des chaînes de format. Utilisez des fonctions sécurisées
+        pour la manipulation des chaînes de format.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Vulnérabilité incubée
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les vulnérabilités incubées se produisent lorsque des failles de
+        sécurité sont introduites dans le code source mais ne sont pas
+        immédiatement exploitées.</p>
+      remediation: >-
+        <p>Effectuez des revues de code régulières et des tests de sécurité pour
+        identifier et corriger les vulnérabilités avant qu'elles ne puissent
+        être exploitées.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: HTTP Splitting/Smuggling
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les attaques de HTTP Splitting/Smuggling exploitent des failles dans
+        le traitement des requêtes HTTP pour injecter des en-têtes ou diviser
+        des requêtes, ce qui peut entraîner des comportements inattendus.</p>
+      remediation: >-
+        <p>Validez et normalisez toutes les entrées utilisateur utilisées dans
+        les requêtes HTTP. Utilisez des parseurs HTTP sécurisés pour traiter les
+        requêtes.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Requêtes HTTP entrantes
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les requêtes HTTP entrantes mal sécurisées peuvent permettre aux
+        attaquants de manipuler les données transmises et d'exploiter des
+        failles dans le traitement des requêtes.</p>
+      remediation: >-
+        <p>Validez et normalisez toutes les entrées utilisateur. Utilisez des
+        pare-feux applicatifs pour filtrer les requêtes HTTP malveillantes.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Injection d'en-tête Host
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les injections d'en-tête Host exploitent des failles dans le
+        traitement des en-têtes HTTP Host pour rediriger des requêtes ou
+        contourner des contrôles d'accès.</p>
+      remediation: >-
+        <p>Validez et normalisez les en-têtes Host. Utilisez des en-têtes
+        stricts pour définir les domaines autorisés.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Injection de template côté serveur
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les injections de template côté serveur permettent aux attaquants
+        d'exécuter du code malveillant en manipulant des templates non
+        sécurisés.</p>
+      remediation: >-
+        <p>Validez et échappez toutes les entrées utilisateur avant de les
+        inclure dans des templates. Utilisez des moteurs de template sécurisés
+        et configurez-les pour éviter l'exécution de code non autorisé.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Forgery de requêtes côté serveur (SSRF)
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les attaques SSRF exploitent des failles dans le traitement des
+        requêtes côté serveur pour accéder à des ressources internes ou externes
+        non autorisées.</p>
+      remediation: >-
+        <p>Validez et normalisez toutes les entrées utilisateur utilisées dans
+        les requêtes côté serveur. Utilisez des listes blanches pour restreindre
+        les destinations autorisées des requêtes.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Assignation massive
+      vulnType: Input Validation Vulnerability
+      description: >-
+        <p>Les vulnérabilités d'assignation massive se produisent lorsque des
+        objets ou des structures de données sont directement mappés à partir des
+        entrées utilisateur sans validation, permettant aux attaquants de
+        modifier des champs non autorisés.</p>
+      remediation: >-
+        <p>Validez toutes les entrées utilisateur avant de les assigner à des
+        objets ou des structures de données. Utilisez des listes blanches pour
+        restreindre les champs modifiables.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Gestion des erreurs inappropriée
+      vulnType: Error Handling Vulnerability
+      description: >-
+        <p>Une gestion des erreurs inappropriée peut révéler des informations
+        sensibles ou des détails sur l'application et son infrastructure, ce qui
+        peut être exploité par des attaquants pour planifier des attaques plus
+        ciblées. Cela inclut la divulgation de messages d'erreur détaillés ou
+        techniques aux utilisateurs finaux.</p>
+      remediation: >-
+        <p>Implémentez une gestion des erreurs centralisée qui capture et
+        enregistre les erreurs de manière sécurisée sans divulguer de détails
+        techniques aux utilisateurs finaux. Affichez des messages d'erreur
+        génériques et informatifs, et enregistrez les détails techniques dans
+        des journaux sécurisés pour une analyse ultérieure par les
+        administrateurs.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Traces de pile (stack traces) trop verbeuses
+      vulnType: Error Handling Vulnerability
+      description: >-
+        <p>Les traces de pile (stack traces) fournissent des informations
+        détaillées sur l'état interne de l'application au moment d'une erreur, y
+        compris les chemins de fichiers, les noms de classes et de méthodes, et
+        les lignes de code exactes où les erreurs se produisent. Ces
+        informations peuvent être exploitées par des attaquants pour découvrir
+        des vulnérabilités.</p>
+      remediation: >-
+        <p>Configurez l'application pour éviter l'affichage des traces de pile
+        aux utilisateurs finaux. Assurez-vous que les traces de pile sont
+        enregistrées dans des journaux sécurisés accessibles uniquement aux
+        développeurs et aux administrateurs pour le débogage et l'analyse des
+        erreurs. Utilisez des outils de gestion des erreurs pour surveiller et
+        analyser les incidents sans compromettre la sécurité.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Sécurité faible de la couche de transport (TLS)
+      vulnType: Weak Cryptography
+      description: >-
+        <p>L'utilisation de versions obsolètes ou faibles de TLS (Transport
+        Layer Security) expose les communications à des attaques telles que
+        l'interception, la falsification ou la dégradation. Des configurations
+        faibles de TLS peuvent inclure l'utilisation de suites de chiffrement
+        faibles ou l'absence de support pour les fonctionnalités de sécurité
+        modernes.</p>
+      remediation: >-
+        <p>Utilisez les versions les plus récentes de TLS (TLS 1.2 ou TLS 1.3).
+        Configurez le serveur pour désactiver les suites de chiffrement faibles
+        et obsolètes et activez uniquement les suites de chiffrement robustes.
+        Appliquez des configurations de sécurité recommandées par les organismes
+        de sécurité reconnus et effectuez des audits réguliers de la
+        configuration TLS.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Oracle de bourrage (Padding Oracle)
+      vulnType: Weak Cryptography
+      description: >-
+        <p>Les attaques Padding Oracle exploitent les failles dans le traitement
+        du bourrage des données lors du déchiffrement, permettant aux attaquants
+        de décrypter les données chiffrées ou de forger des messages chiffrés
+        valides.</p>
+      remediation: >-
+        <p>Utilisez des algorithmes de chiffrement modernes et sécurisés qui
+        incluent des protections contre les attaques de bourrage. Appliquez des
+        correctifs de sécurité et mettez à jour les bibliothèques de chiffrement
+        régulièrement. Implémentez des mécanismes pour vérifier l'intégrité des
+        données avant le déchiffrement.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Informations sensibles envoyées via des canaux non chiffrés
+      vulnType: Weak Cryptography
+      description: >-
+        <p>L'envoi d'informations sensibles via des canaux non chiffrés (comme
+        HTTP, FTP, ou email en clair) expose ces informations à des risques
+        d'interception et de vol par des attaquants.</p>
+      remediation: >-
+        <p>Utilisez toujours des canaux chiffrés (comme HTTPS, FTPS, ou S/MIME
+        pour les emails) pour transmettre des informations sensibles.
+        Assurez-vous que toutes les communications sensibles sont protégées par
+        des protocoles de chiffrement robustes et que les certificats de
+        sécurité sont correctement configurés et maintenus.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Chiffrement faible
+      vulnType: Weak Cryptography
+      description: >-
+        <p>L'utilisation d'algorithmes de chiffrement faibles ou obsolètes
+        (comme DES, 3DES, ou RSA avec des clés inférieures à 2048 bits) expose
+        les données à des risques de déchiffrement par des attaquants.</p>
+      remediation: >-
+        <p>Utilisez des algorithmes de chiffrement modernes et sécurisés (comme
+        AES avec des clés de 256 bits ou RSA avec des clés de 2048 bits ou
+        plus). Appliquez des politiques de rotation des clés et assurez-vous que
+        toutes les données sensibles sont chiffrées à l'aide de ces algorithmes.
+        Effectuez des audits réguliers des pratiques de chiffrement pour
+        s'assurer de leur conformité aux normes de sécurité actuelles.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Validation des données de la logique métier
+      vulnType: Business Logic Vulnerability
+      description: >-
+        <p>Une validation inadéquate des données de la logique métier peut
+        permettre à des attaquants de contourner les règles métier, d'introduire
+        des données invalides ou de manipuler les processus de
+        l'application.</p>
+      remediation: >-
+        <p>Implémentez des validations strictes pour toutes les données d'entrée
+        en fonction des règles métier définies. Assurez-vous que ces validations
+        sont effectuées à la fois côté client et côté serveur pour une
+        protection maximale.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Capacité à forger des requêtes
+      vulnType: Business Logic Vulnerability
+      description: >-
+        <p>La capacité à forger des requêtes permet à des attaquants de
+        manipuler l'application en envoyant des requêtes non autorisées ou
+        modifiées, contournant ainsi les contrôles de la logique métier.</p>
+      remediation: >-
+        <p>Utilisez des tokens CSRF pour protéger les formulaires et les actions
+        sensibles. Validez et authentifiez toutes les requêtes pour vous assurer
+        qu'elles proviennent de sources légitimes et respectent les règles de la
+        logique métier.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Vérification de l'intégrité
+      vulnType: Business Logic Vulnerability
+      description: >-
+        <p>Des vérifications d'intégrité inadéquates peuvent permettre à des
+        attaquants de manipuler des données ou des processus, compromettant
+        ainsi l'exactitude et la fiabilité des informations de
+        l'application.</p>
+      remediation: >-
+        <p>Implémentez des contrôles d'intégrité pour vérifier que les données
+        n'ont pas été altérées de manière non autorisée. Utilisez des mécanismes
+        de hachage et des signatures numériques pour garantir l'intégrité des
+        données sensibles.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Time Guessing
+      vulnType: Business Logic Vulnerability
+      description: >-
+        <p>Les failles liées au timing des processus peuvent permettre à des
+        attaquants de manipuler le flux de travail de l'application en
+        exploitant des conditions de concurrence ou des délais insuffisants.</p>
+      remediation: >-
+        <p>Synchronisez les processus critiques pour éviter les conditions de
+        concurrence. Utilisez des délais appropriés et des vérifications de
+        timing pour assurer le bon fonctionnement des processus de
+        l'application.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Limitation du nombre d'utilisations d'une fonction
+      vulnType: Business Logic Vulnerability
+      description: >-
+        <p>L'absence de limitation sur le nombre d'utilisations d'une fonction
+        peut permettre à des attaquants d'exploiter des fonctionnalités de
+        l'application de manière abusive, comme les tentatives de connexion
+        infinies ou les transactions répétées.</p>
+      remediation: >-
+        <p>Implémentez des limites sur le nombre d'utilisations des fonctions
+        critiques. Utilisez des mécanismes de throttling et de surveillance pour
+        détecter et prévenir les abus.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Contournement des flux de travail
+      vulnType: Business Logic Vulnerability
+      description: >-
+        <p>Le contournement des flux de travail permet à des attaquants de
+        passer outre les étapes critiques des processus métier, compromettant
+        ainsi l'intégrité des transactions ou des opérations.</p>
+      remediation: >-
+        <p>Assurez-vous que les flux de travail sont bien définis et que chaque
+        étape est correctement validée et autorisée. Implémentez des contrôles
+        d'accès stricts et des vérifications pour chaque étape critique du flux
+        de travail.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Défenses contre l'utilisation abusive de l'application
+      vulnType: Business Logic Vulnerability
+      description: >-
+        <p>Les défenses inadéquates contre l'utilisation abusive de
+        l'application peuvent permettre à des attaquants d'exploiter des
+        fonctionnalités légitimes de manière non intentionnelle, entraînant des
+        perturbations ou des abus.</p>
+      remediation: >-
+        <p>Identifiez les scénarios potentiels d'utilisation abusive et
+        implémentez des mesures de protection pour prévenir ces abus. Surveillez
+        les activités suspectes et mettez en place des mécanismes de réponse aux
+        incidents.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Upload de types de fichiers inattendus
+      vulnType: Business Logic Vulnerability
+      description: >-
+        <p>Permettre le téléchargement de types de fichiers inattendus peut
+        entraîner des vulnérabilités, telles que l'exécution de code malveillant
+        ou l'introduction de fichiers non sécurisés dans l'application.</p>
+      remediation: >-
+        <p>Limitez les types de fichiers autorisés au téléchargement en
+        utilisant des listes blanches. Validez et vérifiez les fichiers
+        téléchargés pour vous assurer qu'ils correspondent aux types attendus et
+        qu'ils sont sécurisés.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Upload de fichiers malveillants
+      vulnType: Business Logic Vulnerability
+      description: >-
+        <p>Les fichiers malveillants téléchargés peuvent contenir des logiciels
+        malveillants ou des scripts qui compromettent la sécurité de
+        l'application et des utilisateurs.</p>
+      remediation: >-
+        <p>Scannez tous les fichiers téléchargés à la recherche de logiciels
+        malveillants. Utilisez des sandbox pour analyser les fichiers suspects
+        et empêchez l'upload de fichiers potentiellement dangereux.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Fonctionnalité de paiement vulnérable
+      vulnType: Business Logic Vulnerability
+      description: >-
+        <p>Les vulnérabilités dans la fonctionnalité de paiement peuvent
+        permettre à des attaquants de manipuler les transactions, de détourner
+        des fonds ou de contourner les contrôles de paiement.</p>
+      remediation: >-
+        <p>Implémentez des contrôles stricts pour valider l'intégrité des
+        transactions de paiement. Utilisez des mécanismes de chiffrement pour
+        protéger les informations de paiement et effectuez des audits réguliers
+        des processus de paiement pour détecter et corriger les failles.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Cross-Site Scripting (XSS) basé sur le DOM
+      vulnType: Client-side Vulnerability
+      description: >-
+        <p>Le XSS basé sur le DOM se produit lorsque des entrées utilisateur
+        sont manipulées directement dans le Document Object Model (DOM) du
+        navigateur, permettant aux attaquants d'injecter des scripts
+        malveillants.</p>
+      remediation: >-
+        <p>Validez et échappez toutes les entrées utilisateur avant de les
+        insérer dans le DOM. Utilisez des bibliothèques de sécurité pour
+        manipuler le DOM en toute sécurité et déployez des politiques de
+        sécurité de contenu (CSP).</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Exécution de JavaScript
+      vulnType: Client-side Vulnerability
+      description: >-
+        <p>L'exécution de JavaScript non sécurisé peut permettre à des
+        attaquants d'injecter et d'exécuter des scripts malveillants dans le
+        navigateur de la victime, compromettant la sécurité de l'application et
+        des utilisateurs.</p>
+      remediation: >-
+        <p>Validez et échappez toutes les entrées utilisateur utilisées dans les
+        scripts JavaScript. Utilisez des bibliothèques de sécurité et
+        implémentez des politiques de sécurité de contenu (CSP).</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Injection HTML
+      vulnType: Client-side Vulnerability
+      description: >-
+        <p>L'injection HTML se produit lorsque des entrées utilisateur sont
+        insérées directement dans le code HTML de l'application, permettant
+        l'exécution de code malveillant.</p>
+      remediation: >-
+        <p>Validez et échappez toutes les entrées utilisateur avant de les
+        insérer dans le HTML. Utilisez des méthodes sécurisées pour générer du
+        HTML et des bibliothèques de templates sécurisées.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Redirection d'URL côté client
+      vulnType: Client-side Vulnerability
+      description: >-
+        <p>Les redirections d'URL côté client peuvent permettre à des attaquants
+        de rediriger les utilisateurs vers des sites malveillants en manipulant
+        des paramètres d'URL non sécurisés.</p>
+      remediation: >-
+        <p>Validez et contrôlez toutes les redirections d'URL pour s'assurer
+        qu'elles pointent vers des destinations sûres. Utilisez des listes
+        blanches pour restreindre les URL de redirection
+        autorisées.</p><h4></h4>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Injection CSS
+      vulnType: Client-side Vulnerability
+      description: >-
+        <p>L'injection CSS permet à des attaquants de manipuler le style des
+        pages web et, dans certains cas, d'exploiter des failles XSS en
+        injectant du code CSS malveillant.</p>
+      remediation: >-
+        <p>Validez et échappez toutes les entrées utilisateur avant de les
+        utiliser dans des feuilles de style CSS. Utilisez des politiques de
+        sécurité de contenu (CSP) pour restreindre les sources de styles
+        autorisées</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Manipulation des ressources côté client
+      vulnType: Client-side Vulnerability
+      description: >-
+        <p>La manipulation des ressources côté client permet à des attaquants de
+        modifier les ressources chargées par le navigateur, telles que les
+        scripts, les images ou les fichiers CSS, pour exécuter des attaques
+        malveillantes.</p>
+      remediation: >-
+        <p>Utilisez des politiques de sécurité de contenu (CSP) pour restreindre
+        les sources de ressources autorisées. Validez et contrôlez toutes les
+        ressources chargées dynamiquement.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Partage de ressources cross-origin (CORS)
+      vulnType: Client-side Vulnerability
+      description: >-
+        <p>Les failles dans la configuration de CORS peuvent permettre à des
+        sites non autorisés d'accéder aux ressources de l'application,
+        compromettant ainsi la sécurité des données.</p>
+      remediation: >-
+        <p>Configurez CORS de manière restrictive pour n'autoriser que les
+        domaines de confiance à accéder aux ressources de l'application.
+        Utilisez des en-têtes de réponse HTTP appropriés pour contrôler les
+        accès cross-origin.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Cross Site Flashing
+      vulnType: Client-side Vulnerability
+      description: >-
+        <p>Le Cross Site Flashing permet à des attaquants d'exploiter des
+        vulnérabilités dans les fichiers Flash pour exécuter du code malveillant
+        ou voler des données.</p>
+      remediation: >-
+        <p>Évitez l'utilisation de Flash dans les applications web. Si
+        l'utilisation de Flash est nécessaire, assurez-vous que les fichiers
+        sont sécurisés et que les paramètres de sécurité sont correctement
+        configurés.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Détournement de clic (Clickjacking)
+      vulnType: Client-side Vulnerability
+      description: >-
+        <p>Le Clickjacking permet à des attaquants de manipuler l'interface
+        utilisateur de l'application pour inciter les utilisateurs à cliquer sur
+        des éléments invisibles ou déguisés, compromettant ainsi la
+        sécurité.</p>
+      remediation: >-
+        <p>Utilisez des en-têtes HTTP comme X-Frame-Options ou des directives
+        CSP pour empêcher l'intégration de la page dans des iframes non
+        autorisés.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: WebSockets
+      vulnType: Client-side Vulnerability
+      description: >-
+        <p>Les failles dans la mise en œuvre de WebSockets peuvent permettre à
+        des attaquants de manipuler les communications en temps réel,
+        compromettant ainsi la sécurité des données transmises.</p>
+      remediation: >-
+        <p>Utilisez des connexions WebSocket sécurisées (wss://) et validez
+        toutes les données échangées via WebSockets. Implémentez des mécanismes
+        d'authentification et d'autorisation robustes pour les connexions
+        WebSocket.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Messagerie Web
+      vulnType: Client-side Vulnerability
+      description: >-
+        <p>Les vulnérabilités dans la messagerie Web (Web Messaging) peuvent
+        permettre à des attaquants d'envoyer des messages malveillants entre
+        différentes fenêtres ou iframes, compromettant la sécurité de
+        l'application.</p>
+      remediation: >-
+        <p>Validez et vérifiez l'origine des messages reçus avant de les
+        traiter. Utilisez des canaux de communication sécurisés et des
+        mécanismes de contrôle des accès pour la messagerie Web.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Stockage dans le navigateur
+      vulnType: Client-side Vulnerability
+      description: >-
+        <p>Le stockage dans le navigateur (localStorage, sessionStorage) peut
+        être vulnérable aux attaques XSS, permettant à des attaquants d'accéder
+        ou de manipuler les données stockées.</p>
+      remediation: >-
+        <p>Évitez de stocker des informations sensibles dans le stockage du
+        navigateur. Utilisez des mécanismes de chiffrement pour protéger les
+        données et validez toutes les entrées utilisateur avant de les
+        stocker.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Inclusion de scripts cross-site
+      vulnType: Client-side Vulnerability
+      description: >-
+        <p>L'inclusion de scripts cross-site permet à des attaquants de charger
+        des scripts malveillants depuis des sources externes non sécurisées,
+        compromettant la sécurité de l'application.</p>
+      remediation: >-
+        <p>Utilisez des politiques de sécurité de contenu (CSP) pour restreindre
+        les sources de scripts autorisées. Validez et contrôlez toutes les
+        inclusions de scripts dynamiques.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Reverse Tabnabbing
+      vulnType: Client-side Vulnerability
+      description: >-
+        <p>Le Reverse Tabnabbing permet à des attaquants de manipuler la page
+        parent lors de l'ouverture d'un lien dans un nouvel onglet, redirigeant
+        ainsi l'utilisateur vers un site malveillant.</p>
+      remediation: >-
+        <p>Utilisez l'attribut HTML <code>rel="noopener noreferrer"</code> pour
+        les liens ouvrant de nouvelles fenêtres ou onglets afin de prévenir les
+        attaques de Reverse Tabnabbing.</p>
+      references: []
+      customFields: []
+  category: Pentest Web
+- cvssv3: null
+  details:
+    - locale: fr
+      title: Vulnérabilité GraphQL
+      vulnType: API Vulnerability
+      description: >-
+        <p>GraphQL est un langage de requête pour les API qui permet aux clients
+        de demander exactement les données dont ils ont besoin. Bien que GraphQL
+        offre de nombreux avantages, il introduit également des vulnérabilités
+        spécifiques, telles que l'exposition de données sensibles, les abus de
+        requêtes et les erreurs de configuration de la validation des
+        schémas.</p>
+      remediation: >-
+        <ul><li><p><strong>Validation des schémas :</strong> Assurez-vous que
+        les schémas GraphQL sont correctement définis et validés pour empêcher
+        les requêtes malveillantes. Limitez les types et les champs accessibles
+        pour réduire l'exposition des données
+        sensibles.</p></li><li><p><strong>Contrôle des accès :</strong>
+        Implémentez des mécanismes d'authentification et d'autorisation robustes
+        pour s'assurer que seules les parties autorisées peuvent accéder aux
+        données et aux opérations sensibles. Utilisez des jetons d'accès
+        sécurisés et validez-les pour chaque
+        requête.</p></li><li><p><strong>Limitation des requêtes :</strong>
+        Utilisez des mécanismes de limitation des requêtes pour prévenir les
+        abus et les attaques de déni de service (DoS). Définissez des limites
+        sur la complexité et la profondeur des requêtes pour empêcher les
+        requêtes trop gourmandes en ressources.</p></li><li><p><strong>Gestion
+        des erreurs :</strong> Configurez la gestion des erreurs pour éviter de
+        divulguer des informations sensibles dans les messages d'erreur.
+        Utilisez des messages d'erreur génériques pour les utilisateurs finaux
+        et enregistrez les détails techniques dans des journaux sécurisés pour
+        une analyse ultérieure par les
+        développeurs.</p></li><li><p><strong>Sanitisation des entrées :</strong>
+        Validez et nettoyez toutes les entrées utilisateur pour empêcher les
+        injections et les attaques de manipulation des données. Utilisez des
+        bibliothèques de validation des entrées sécurisées et configurez-les
+        correctement.</p></li><li><p><strong>Surveillance et journalisation
+        :</strong> Surveillez et enregistrez toutes les activités de l'API
+        GraphQL pour détecter les comportements suspects et les tentatives
+        d'attaque. Utilisez des outils de surveillance et d'analyse pour
+        analyser les journaux et réagir rapidement aux incidents de
+        sécurité.</p></li></ul><p></p>
+      references:
+        - ''
+      customFields: []
+  category: Pentest Web
